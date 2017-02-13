@@ -71,24 +71,6 @@ def suning_cuizi():
 def jd_cuizi():
     d.screen.on()
     d.press.home()
-    #解锁，没有密码的情况下
-    '''
-    sx=560
-    sy=1700
-    ex=560
-    ey=900
-    #d.swipe(sx,sy,ex,ey,steps=2)
-
-    #d(scrollable=True).fling.horiz.forward()
-    home_swipe_sx=950
-    home_swipe_sy=1350
-    home_swipe_ex=450
-    home_swipe_ey=1350
-    while not d(text=u"手机京东").exists:
-        d.swipe(home_swipe_sx,home_swipe_sy,home_swipe_ex,home_swipe_ey,steps=2)
-        time.sleep(3)
-    d(text=u'手机京东').click()
-    '''
     activity_name='com.jingdong.app.mall/.main.MainActivity'
     launch_app(activity_name)
 
