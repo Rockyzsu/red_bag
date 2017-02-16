@@ -63,7 +63,7 @@ def suning_cuizi():
     time.sleep(10)
 
     daka_x=displayWidth/2
-    daka_y=displayHeight/2
+    daka_y=displayHeight/2+100
     d.click(daka_x,daka_y)
     time.sleep(20)
     print "Sunning Done"
