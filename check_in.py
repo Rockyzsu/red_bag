@@ -65,7 +65,10 @@ def suning_cuizi():
     daka_x=displayWidth/2
     daka_y=displayHeight/2+100
     d.click(daka_x,daka_y)
+
     time.sleep(20)
+    d.click(daka_x,daka_y)
+    d.click(daka_x,daka_y)
     print "Sunning Done"
 
 def jd_cuizi():
@@ -84,6 +87,10 @@ def jd_cuizi():
     #glaxy_x=yun_x*gallery*full/cuizi_full
     time.sleep(15)
     d.click(dou_x,dou_y)
+    time.sleep(2)
+    d.click(dou_x,dou_y)
+
+
     print "JD done"
 
 def gdyd_cuizi():
