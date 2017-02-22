@@ -54,21 +54,25 @@ def suning_cuizi():
         print "Failed to get the page"
         return
     d(text=u'领云钻').click()
+    print "Click"
     yun_x=372
     yun_y=1524
 
     #glaxy_x=yun_x*gallery*full/cuizi_full
     time.sleep(15)
     d.click(yun_x,yun_y)
+    print "Click"
     time.sleep(10)
 
     daka_x=displayWidth/2
     daka_y=displayHeight/2+100
     d.click(daka_x,daka_y)
-
+    print "Click"
     time.sleep(20)
     d.click(daka_x,daka_y)
+    print "Click"
     d.click(daka_x,daka_y)
+    print "Click"
     print "Sunning Done"
 
 def jd_cuizi():
@@ -87,8 +91,10 @@ def jd_cuizi():
     #glaxy_x=yun_x*gallery*full/cuizi_full
     time.sleep(15)
     d.click(dou_x,dou_y)
+    print "Click"
     time.sleep(2)
     d.click(dou_x,dou_y)
+    print "Click"
 
 
     print "JD done"
@@ -166,6 +172,8 @@ def taobao_cuizi():
     jb_x=900
     jb_y=370
     d.click(jb_x,jb_y)
+    print "Click"
+    time.sleep(5)
 
 def suning_samsung():
     #苏宁在6点之后
