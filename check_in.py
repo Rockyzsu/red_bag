@@ -138,6 +138,12 @@ def gdyd_cuizi():
     yd_y=1100
     d.click(yd_x,yd_y)
     print "GDYD done"
+    d.press.back()
+    d(text=u'全部').click()
+    time.sleep(8)
+    d(text=u'零流量').click()
+    time.sleep(8)
+    d(text='签到')
 
 
 def taobao_cuizi():
