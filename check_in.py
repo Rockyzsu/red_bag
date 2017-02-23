@@ -96,7 +96,21 @@ def jd_cuizi():
     d.click(dou_x,dou_y)
     print "Click"
 
-
+    #点击使用功能
+    d.press.back()
+    time.sleep(4)
+    d(text='全部')
+    d(text=u'全部').click()
+    time.sleep(4)
+    d(text=u'领流量').click()
+    time.sleep(5)
+    #这个签到好像找不到
+    #d(text=u'签到').click()
+    d.click(271,813)
+    time.sleep(1)
+    d.click(271,813)
+    time.sleep(5)
+    print "get liu liang"
     print "JD done"
 
 def gdyd_cuizi():
