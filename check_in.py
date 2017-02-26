@@ -159,28 +159,32 @@ def gdyd_cuizi():
     time.sleep(8)
     d(text='签到')
 
+def each_dianpu():
+    mid_x=displayWidth/2
+    #d.click(919,566)
+    time.sleep(3)
+
+    d.click(mid_x,1868)
+    #点击免费试用
+    time.sleep(3)
+    d.click(mid_x,1311)
+    time.sleep(2)
+    d.click(mid_x,1555)
+    time.sleep(3)
+    d.press.back()
+    time.sleep(5)
+    d.press.back()
+    time.sleep(5)
+    #返回到试用列表
+
+def shiyong():
+    each_delta=390
 
 def taobao_cuizi():
+
     d.screen.on()
     d.press.home()
-    #解锁，没有密码的情况下
-    '''
-    sx=560
-    sy=1700
-    ex=560
-    ey=900
-    #d.swipe(sx,sy,ex,ey,steps=2)
 
-    #d(scrollable=True).fling.horiz.forward()
-    home_swipe_sx=950
-    home_swipe_sy=1350
-    home_swipe_ex=450
-    home_swipe_ey=1350
-    while not d(text=u"手机淘宝").exists:
-        d.swipe(home_swipe_sx,home_swipe_sy,home_swipe_ex,home_swipe_ey,steps=2)
-        time.sleep(3)
-    d(text=u'手机淘宝').click()
-    '''
     activity_name='com.taobao.taobao/com.taobao.tao.homepage.MainActivity3'
     launch_app(activity_name)
     if d(text=u'领金币').wait.exists(timeout=12*1000):
@@ -193,7 +197,96 @@ def taobao_cuizi():
     jb_y=370
     d.click(jb_x,jb_y)
     print "Click"
-    time.sleep(5)
+    time.sleep(6)
+    d.press.back()
+
+    time.sleep(6)
+
+    mid_x=displayWidth/2
+    try:
+
+        d(text=u'我的淘宝').click()
+        time.sleep(3)
+        d(text='查看更多工具').click()
+        time.sleep(3)
+        d(scrollable=True).scroll.to(text=u'免费试用')
+        time.sleep(5)
+        d(text=u'免费试用').click()
+        time.sleep(7)
+
+
+        delta_y=144
+        full_y=1920
+        full_x=1080
+        fix_x=880
+        origin_y=222
+        d.swipe(fix_x,full_y-delta_y,fix_x,origin_y)
+        time.sleep(3)
+        d.swipe(fix_x,1352,fix_x,origin_y)
+        time.sleep(3)
+        d.click(580,335)
+        time.sleep(3)
+        #这里停在数码科技哪里
+        #each_dianpu()
+
+        delta_each=390
+        for i in range(4):
+            d.click(919,566+i*390)
+            time.sleep(4)
+            each_dianpu()
+    except:
+        print "Can't find items"
+
+def taobao_shiyong():
+    '''
+    d.screen.on()
+    d.press.home()
+
+    activity_name='com.taobao.taobao/com.taobao.tao.homepage.MainActivity3'
+    launch_app(activity_name)
+    mid_x=displayWidth/2
+    '''
+    try:
+        '''
+        d(text=u'我的淘宝').click()
+        time.sleep(3)
+        d(text='查看更多工具').click()
+        time.sleep(3)
+        d(scrollable=True).scroll.to(text=u'免费试用')
+        time.sleep(2)
+        d(text=u'免费试用').click()
+        time.sleep(3)
+
+
+        delta_y=144
+        full_y=1920
+        full_x=1080
+        fix_x=880
+        origin_y=222
+        d.swipe(fix_x,full_y-delta_y,fix_x,origin_y)
+        time.sleep(3)
+        #d.swipe(fix_x,952,fix_x,origin_y)
+        time.sleep(5)
+
+        sumakeji=displayWidth/8*3
+        jiayongdianqi=displayWidth/8*5
+        d.click(jiayongdianqi,1250)
+        time.sleep(3)
+        #这里停在数码科技哪里
+        #each_dianpu()
+        d.click(jiayongdianqi,300)
+        '''
+        delta_each=400
+        time.sleep(3)
+
+        for dragtime in range(20):
+            for i in range(3):
+                d.click(919,420+i*delta_each)
+                time.sleep(8)
+                each_dianpu()
+            d.swipe(919,420+delta_each*3,919,400)
+    except:
+        print "Can't find items"
 
 def suning_samsung():
     #苏宁在6点之后
@@ -347,12 +440,7 @@ def other_func():
 if __name__=='__main__':
     get_info()
 
-    suning_cuizi()
-    #other_func()
-    jd_cuizi()
-    #广东移动新版已经没有签到功能
-    #gdyd_cuizi()
-    taobao_cuizi()
-    #suning_samsung()
-    #jd_samsung()
-    #taobao_samsung()
+    #suning_cuizi()
+    #jd_cuizi()
+    #taobao_cuizi()
+    taobao_shiyong()
