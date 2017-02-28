@@ -177,8 +177,7 @@ def each_dianpu():
     time.sleep(5)
     #返回到试用列表
 
-def shiyong():
-    each_delta=390
+
 
 def taobao_cuizi():
 
@@ -440,7 +439,7 @@ def other_func():
 if __name__=='__main__':
     get_info()
 
-    #suning_cuizi()
-    #jd_cuizi()
-    #taobao_cuizi()
+    suning_cuizi()
+    jd_cuizi()
+    taobao_cuizi()
     taobao_shiyong()
