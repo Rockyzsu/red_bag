@@ -201,7 +201,7 @@ def taobao_cuizi():
     d.press.back()
 
     time.sleep(6)
-
+    '''
     mid_x=displayWidth/2
     try:
 
@@ -236,18 +236,18 @@ def taobao_cuizi():
             each_dianpu()
     except:
         print "Can't find items"
-
-def taobao_shiyong():
     '''
+def taobao_shiyong():
+
     d.screen.on()
     d.press.home()
 
     activity_name='com.taobao.taobao/com.taobao.tao.homepage.MainActivity3'
     launch_app(activity_name)
     mid_x=displayWidth/2
-    '''
+
     try:
-        '''
+
         d(text=u'我的淘宝').click()
         time.sleep(3)
         d(text='查看更多工具').click()
@@ -275,7 +275,7 @@ def taobao_shiyong():
         #这里停在数码科技哪里
         #each_dianpu()
         d.click(jiayongdianqi,300)
-        '''
+
         delta_each=400
         time.sleep(3)
 
