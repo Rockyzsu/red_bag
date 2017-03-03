@@ -197,45 +197,7 @@ def taobao_cuizi():
     d.click(jb_x,jb_y)
     print "Click"
     time.sleep(6)
-    d.press.back()
 
-    time.sleep(6)
-    '''
-    mid_x=displayWidth/2
-    try:
-
-        d(text=u'我的淘宝').click()
-        time.sleep(3)
-        d(text='查看更多工具').click()
-        time.sleep(3)
-        d(scrollable=True).scroll.to(text=u'免费试用')
-        time.sleep(5)
-        d(text=u'免费试用').click()
-        time.sleep(7)
-
-
-        delta_y=144
-        full_y=1920
-        full_x=1080
-        fix_x=880
-        origin_y=222
-        d.swipe(fix_x,full_y-delta_y,fix_x,origin_y)
-        time.sleep(3)
-        d.swipe(fix_x,1352,fix_x,origin_y)
-        time.sleep(3)
-        d.click(580,335)
-        time.sleep(3)
-        #这里停在数码科技哪里
-        #each_dianpu()
-
-        delta_each=390
-        for i in range(4):
-            d.click(919,566+i*390)
-            time.sleep(4)
-            each_dianpu()
-    except:
-        print "Can't find items"
-    '''
 def taobao_shiyong():
 
     d.screen.on()
@@ -269,21 +231,21 @@ def taobao_shiyong():
 
         sumakeji=displayWidth/8*3
         jiayongdianqi=displayWidth/8*5
-        d.click(jiayongdianqi,1250)
+        d.click(jiayongdianqi,1660)
         time.sleep(3)
-        #这里停在数码科技哪里
+
         #each_dianpu()
-        d.click(jiayongdianqi,300)
+        #d.click(jiayongdianqi,300)
 
         delta_each=400
         time.sleep(3)
 
         for dragtime in range(20):
             for i in range(3):
-                d.click(919,420+i*delta_each)
+                d.click(919,600+i*delta_each)
                 time.sleep(8)
                 each_dianpu()
-            d.swipe(919,420+delta_each*3,919,400)
+            d.swipe(919,1600,919,400)
     except:
         print "Can't find items"
 
