@@ -253,6 +253,21 @@ def taobao_shiyong():
     except:
         print "Can't find items"
 
+def manual_shiyong():
+    delta_each=400
+    time.sleep(3)
+
+    for dragtime in range(20):
+        print 'dragtime'
+        for i in range(3):
+            d.click(919,420+i*delta_each)
+            print 'click'
+            time.sleep(8)
+            #each_dianpu()
+            each_dianpu()
+            time.sleep(8)
+        d.swipe(919,420+delta_each*3,919,400)
+        time.sleep(5)
 
 def other_func():
     global displayWidth
@@ -262,8 +277,8 @@ def other_func():
 
 if __name__=='__main__':
     get_info()
-
     suning_cuizi()
     jd_cuizi()
     taobao_cuizi()
     taobao_shiyong()
+    #manual_shiyong()
