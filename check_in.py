@@ -197,7 +197,8 @@ def taobao_cuizi():
     d.click(jb_x,jb_y)
     print "Click"
     time.sleep(6)
-
+    d.click(jb_x,jb_y)
+    time.sleep(5)
 
 def taobao_shiyong():
 
@@ -279,5 +280,6 @@ if __name__=='__main__':
     suning_cuizi()
     jd_cuizi()
     taobao_cuizi()
+    print "on shi yong"
     taobao_shiyong()
     #manual_shiyong()
