@@ -162,15 +162,15 @@ def gdyd_cuizi():
 def each_dianpu():
     mid_x=displayWidth/2
     #d.click(919,566)
-    time.sleep(3)
+    time.sleep(5)
 
     d.click(mid_x,1868)
     #点击免费试用
-    time.sleep(3)
+    time.sleep(5)
     d.click(mid_x,1311)
-    time.sleep(2)
+    time.sleep(5)
     d.click(mid_x,1555)
-    time.sleep(3)
+    time.sleep(5)
     d.press.back()
     time.sleep(5)
     d.press.back()
@@ -245,10 +245,10 @@ def taobao_shiyong():
         for dragtime in range(20):
             for i in range(3):
                 d.click(919,600+i*delta_each)
-                time.sleep(8)
+                time.sleep(12)
                 each_dianpu()
 
-            d.swipe(919,1600,919,400)
+            d.swipe(919,420+delta_each*3,919,400)
 
     except:
         print "Can't find items"
@@ -262,8 +262,7 @@ def manual_shiyong():
         for i in range(3):
             d.click(919,420+i*delta_each)
             print 'click'
-            time.sleep(8)
-            #each_dianpu()
+            time.sleep(12)
             each_dianpu()
             time.sleep(8)
         d.swipe(919,420+delta_each*3,919,400)
@@ -277,9 +276,9 @@ def other_func():
 
 if __name__=='__main__':
     get_info()
-    suning_cuizi()
-    jd_cuizi()
-    taobao_cuizi()
+    #suning_cuizi()
+    #d_cuizi()
+    #taobao_cuizi()
     print "on shi yong"
-    taobao_shiyong()
-    #manual_shiyong()
+    #taobao_shiyong()
+    manual_shiyong()
