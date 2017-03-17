@@ -211,9 +211,10 @@ def taobao_shiyong():
 
     try:
 
-        d(text=u'我的淘宝').click()
-        time.sleep(3)
-        d(text='查看更多工具').click()
+        #d(text=u'我的淘宝').click()
+        d.click(990,1800)
+        time.sleep(6)
+        d(text='查看全部工具').click()
         time.sleep(3)
         d(scrollable=True).scroll.to(text=u'免费试用')
         time.sleep(2)
@@ -277,9 +278,9 @@ def other_func():
 
 if __name__=='__main__':
     get_info()
-    suning_cuizi()
-    jd_cuizi()
-    taobao_cuizi()
+    #suning_cuizi()
+    #jd_cuizi()
+    #taobao_cuizi()
     print "on shi yong"
-    taobao_shiyong()
-    #manual_shiyong()
+    #taobao_shiyong()
+    manual_shiyong()
