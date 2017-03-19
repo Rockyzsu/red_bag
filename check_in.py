@@ -243,6 +243,7 @@ def taobao_shiyong():
 
         for dragtime in range(20):
             for i in range(3):
+                print "Trial"
                 d.click(919,600+i*delta_each)
                 time.sleep(8)
                 each_dianpu()
