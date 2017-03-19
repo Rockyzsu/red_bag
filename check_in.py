@@ -50,6 +50,7 @@ def suning_cuizi():
     '''
     activity_name='com.suning.mobile.ebuy/.base.host.InitialActivity'
     launch_app(activity_name)
+    time.sleep(5)
     if not d(text=u'领云钻').wait.exists(timeout=20*1000):
         print "Failed to get the page"
         return
@@ -197,8 +198,7 @@ def taobao_cuizi():
     d.click(jb_x,jb_y)
     print "Click"
     time.sleep(6)
-    d.click(jb_x,jb_y)
-    time.sleep(5)
+
 
 def taobao_shiyong():
 
@@ -208,12 +208,12 @@ def taobao_shiyong():
     activity_name='com.taobao.taobao/com.taobao.tao.homepage.MainActivity3'
     launch_app(activity_name)
     mid_x=displayWidth/2
-
+    time.sleep(8)
+    d.click(980,1863)
     try:
 
-        d(text=u'我的淘宝').click()
         time.sleep(3)
-        d(text='查看更多工具').click()
+        d(text='查看全部工具').click()
         time.sleep(3)
         d(scrollable=True).scroll.to(text=u'免费试用')
         time.sleep(2)
@@ -228,16 +228,15 @@ def taobao_shiyong():
         origin_y=222
         d.swipe(fix_x,full_y-delta_y,fix_x,origin_y)
         time.sleep(3)
-        #d.swipe(fix_x,952,fix_x,origin_y)
         time.sleep(5)
 
-        sumakeji=displayWidth/8*3
-        jiayongdianqi=displayWidth/8*5
-        d.click(jiayongdianqi,1660)
-        time.sleep(3)
+        #数码科技
+        #d.click(614,1185)
 
-        #each_dianpu()
-        #d.click(jiayongdianqi,300)
+        #家用电器
+        d.click(890,1185)
+        time.sleep(7)
+
 
         delta_each=400
         time.sleep(3)
@@ -249,7 +248,7 @@ def taobao_shiyong():
                 each_dianpu()
 
             d.swipe(919,1600,919,400)
-
+            time.sleep(5)
     except:
         print "Can't find items"
 
@@ -263,7 +262,6 @@ def manual_shiyong():
             d.click(919,420+i*delta_each)
             print 'click'
             time.sleep(8)
-            #each_dianpu()
             each_dianpu()
             time.sleep(8)
         d.swipe(919,420+delta_each*3,919,400)
@@ -277,9 +275,9 @@ def other_func():
 
 if __name__=='__main__':
     get_info()
-    suning_cuizi()
-    jd_cuizi()
-    taobao_cuizi()
+    #suning_cuizi()
+    #jd_cuizi()
+    #taobao_cuizi()
     print "on shi yong"
     taobao_shiyong()
     #manual_shiyong()
