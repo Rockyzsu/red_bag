@@ -163,15 +163,15 @@ def gdyd_cuizi():
 def each_dianpu():
     mid_x=displayWidth/2
     #d.click(919,566)
-    time.sleep(3)
+    time.sleep(4)
 
     d.click(mid_x,1868)
     #点击免费试用
-    time.sleep(3)
+    time.sleep(4)
     d.click(mid_x,1311)
-    time.sleep(2)
+    time.sleep(4)
     d.click(mid_x,1555)
-    time.sleep(3)
+    time.sleep(4)
     d.press.back()
     time.sleep(5)
     d.press.back()
@@ -218,7 +218,7 @@ def taobao_shiyong():
         d(scrollable=True).scroll.to(text=u'免费试用')
         time.sleep(2)
         d(text=u'免费试用').click()
-        time.sleep(3)
+        time.sleep(8)
 
 
         delta_y=144
@@ -227,8 +227,7 @@ def taobao_shiyong():
         fix_x=880
         origin_y=222
         d.swipe(fix_x,full_y-delta_y,fix_x,origin_y)
-        time.sleep(3)
-        time.sleep(5)
+        time.sleep(8)
 
         #数码科技
         #d.click(614,1185)
