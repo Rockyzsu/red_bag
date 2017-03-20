@@ -171,7 +171,7 @@ def each_dianpu():
     d.click(mid_x,1311)
     time.sleep(4)
     d.click(mid_x,1555)
-    time.sleep(4)
+    time.sleep(8)
     d.press.back()
     time.sleep(5)
     d.press.back()
@@ -201,7 +201,7 @@ def taobao_cuizi():
 
 
 def taobao_shiyong():
-
+    #一天试用 15次
     d.screen.on()
     d.press.home()
 
@@ -240,7 +240,7 @@ def taobao_shiyong():
         delta_each=400
         time.sleep(3)
 
-        for dragtime in range(20):
+        for dragtime in range(5):
             for i in range(3):
                 print "Trial"
                 d.click(919,600+i*delta_each)
@@ -275,9 +275,9 @@ def other_func():
 
 if __name__=='__main__':
     get_info()
-    #suning_cuizi()
-    #jd_cuizi()
-    #taobao_cuizi()
+    suning_cuizi()
+    jd_cuizi()
+    taobao_cuizi()
     print "on shi yong"
     taobao_shiyong()
     #manual_shiyong()
