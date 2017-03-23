@@ -2,7 +2,7 @@
 __author__ = 'Rocky'
 #对各种app进行签到
 from uiautomator import device as d
-import time,subprocess
+import time,subprocess,sys
 
 global displayWidth
 global displayHeight
@@ -274,10 +274,21 @@ def other_func():
     print displayHeight
 
 if __name__=='__main__':
+    #print sys.argv[0]
+    #print sys.argv[1]
+    if len(sys.argv)<2:
+        print "input argument"
+        sys.exit(1)
     get_info()
-    suning_cuizi()
-    jd_cuizi()
-    taobao_cuizi()
-    print "on shi yong"
-    taobao_shiyong()
-    #manual_shiyong()
+    if sys.argv[1]=='1':
+
+        suning_cuizi()
+        jd_cuizi()
+        taobao_cuizi()
+        print "on shi yong"
+        taobao_shiyong()
+
+    elif sys.argv[1]=='2':
+        print "put UI on taobao trial\n"
+        time.sleep(5)
+        manual_shiyong()
