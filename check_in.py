@@ -278,6 +278,9 @@ if __name__=='__main__':
     #print sys.argv[1]
     if len(sys.argv)<2:
         print "input argument"
+        print 'python checkin.py 1'
+        print 'python checkin.py 2'
+
         sys.exit(1)
     get_info()
     if sys.argv[1]=='1':
