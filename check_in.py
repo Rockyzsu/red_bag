@@ -100,8 +100,13 @@ def jd_cuizi():
     #点击使用功能
     d.press.back()
     time.sleep(4)
-    d(text='全部')
-    d(text=u'全部').click()
+    d.swipe(1000,770,100,770)
+    time.sleep(8)
+    d.click(990,846)
+    '''
+    if d(text=u'全部').wait.exists(timeout=2000):
+        d(text=u'全部').click()
+    '''
     time.sleep(4)
     d(text=u'领流量').click()
     time.sleep(5)
