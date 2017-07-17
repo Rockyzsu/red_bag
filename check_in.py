@@ -100,6 +100,8 @@ def jd_cuizi():
     #点击使用功能
     d.press.back()
     time.sleep(4)
+    d.press.back()
+    time.sleep(4)
     d.swipe(1000,770,100,770)
     time.sleep(8)
     d.click(990,846)
@@ -300,3 +302,6 @@ if __name__=='__main__':
         print "put UI on taobao trial\n"
         time.sleep(5)
         manual_shiyong()
+    elif sys.argv[1]=='3':
+        print "only click jd"
+        jd_cuizi()
