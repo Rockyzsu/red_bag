@@ -102,7 +102,7 @@ def jd_cuizi():
     time.sleep(4)
     d.press.back()
     time.sleep(4)
-    d.swipe(1000,770,100,770)
+    d.swipe(980,1250,280,1250)
     time.sleep(8)
     d.click(990,846)
     '''
