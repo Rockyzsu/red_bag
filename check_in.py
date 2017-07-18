@@ -104,7 +104,7 @@ def jd_cuizi():
     time.sleep(4)
     d.swipe(980,1250,80,1250)
     time.sleep(8)
-    d.click(990,846)
+    d.click(990,1240)
     '''
     if d(text=u'全部').wait.exists(timeout=2000):
         d(text=u'全部').click()
