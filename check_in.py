@@ -102,9 +102,12 @@ def jd_cuizi():
     time.sleep(4)
     d.press.back()
     time.sleep(4)
-    d.swipe(980,1250,80,1250)
+    no_ad_y=775
+    ad_y=1250
+    d.swipe(980,no_ad_y,80,no_ad_y)
     time.sleep(8)
-    d.click(990,1240)
+    #因为这个坐标会改变，所以定义两个变量来操作
+    d.click(990,no_ad_y)
     '''
     if d(text=u'全部').wait.exists(timeout=2000):
         d(text=u'全部').click()
