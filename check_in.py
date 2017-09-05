@@ -96,6 +96,9 @@ def jd_cuizi():
     time.sleep(2)
     d.click(dou_x,dou_y)
     print "Click"
+    time.sleep(3)
+    d.click(505,900)
+    print "Click"
 
     #点击使用功能
     d.press.back()
@@ -295,11 +298,11 @@ if __name__=='__main__':
     get_info()
     if sys.argv[1]=='1':
 
-        suning_cuizi()
+        #suning_cuizi()
         jd_cuizi()
-        taobao_cuizi()
+        #taobao_cuizi()
         print "on shi yong"
-        taobao_shiyong()
+        #taobao_shiyong()
 
     elif sys.argv[1]=='2':
         print "put UI on taobao trial\n"
