@@ -8,6 +8,7 @@ global displayWidth
 global displayHeight
 displayWidth_cuizi=1080
 displayHeight_cuizi=1920
+#启动app
 def launch_app(activity_name):
     cmd='adb shell am start -n %s' %activity_name
     p=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
@@ -86,20 +87,29 @@ def jd_cuizi():
         print "Failed to get the page"
         return
     d(text=u'领京豆').click()
-    dou_x=853
-    dou_y=400
+    dou_x=915
+    dou_y=300
 
     #glaxy_x=yun_x*gallery*full/cuizi_full
     time.sleep(15)
     d.click(dou_x,dou_y)
-    print "Click"
     time.sleep(2)
     d.click(dou_x,dou_y)
-    print "Click"
+    print u"京豆"
     time.sleep(3)
-    d.click(505,900)
-    print "Click"
-
+    get_x,get_y=505,900
+    d.click(get_x,get_y)
+    time.sleep(8)
+    d.press.back()
+    time.sleep(4)
+    liuliang_x,liuliang_y=731,574
+    d.click(liuliang_x,liuliang_y)
+    time.sleep(10)
+    ll_x,ll_y=544,432
+    d.click(ll_x,ll_y)
+    time.sleep(8)
+    print u'京东完成'
+    '''
     #点击使用功能
     d.press.back()
     time.sleep(4)
@@ -107,22 +117,27 @@ def jd_cuizi():
     time.sleep(4)
     no_ad_y=775
     ad_y=1250
-    d.swipe(980,no_ad_y,80,no_ad_y)
+    d.swipe(990,no_ad_y,100,no_ad_y)
     time.sleep(8)
     #因为这个坐标会改变，所以定义两个变量来操作
     d.click(990,no_ad_y)
     '''
+    '''
     if d(text=u'全部').wait.exists(timeout=2000):
         d(text=u'全部').click()
+    '''
     '''
     time.sleep(4)
     d(text=u'领流量').click()
     time.sleep(5)
     #这个签到好像找不到
     #d(text=u'签到').click()
-    d.click(271,813)
+    liuliang_x,liuliang_y=529,450
+    d.click(liuliang_x,liuliang_y)
     time.sleep(5)
-    d.click(271,813)
+    d.click(liuliang_x,liuliang_y)
+    '''
+
     time.sleep(5)
     print "get liu liang"
     print "JD done"
