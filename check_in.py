@@ -313,10 +313,10 @@ if __name__=='__main__':
     get_info()
     if sys.argv[1]=='1':
 
-        #suning_cuizi()
+        suning_cuizi()
         jd_cuizi()
         #taobao_cuizi()
-        print "on shi yong"
+        #print "on shi yong"
         #taobao_shiyong()
 
     elif sys.argv[1]=='2':
