@@ -51,14 +51,14 @@ def suning_cuizi():
     '''
     activity_name='com.suning.mobile.ebuy/.base.host.InitialActivity'
     launch_app(activity_name)
-    time.sleep(5)
+    time.sleep(9)
     if not d(text=u'领云钻').wait.exists(timeout=20*1000):
         print "Failed to get the page"
         return
     d(text=u'领云钻').click()
     print "Click"
-    yun_x=372
-    yun_y=1524
+    yun_x=551
+    yun_y=738
 
     #glaxy_x=yun_x*gallery*full/cuizi_full
     time.sleep(15)
