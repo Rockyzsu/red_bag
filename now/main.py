@@ -2,7 +2,8 @@ from uiautomator import device as d
 import time,sys
 def now(wait_time):
 	x=943
-	y=479
+	# y=
+	y=742
 	while wait_time>0:
 		time.sleep(1)
 		wait_time-=1
@@ -14,8 +15,8 @@ def now(wait_time):
 		count-=1
 
 def main():
-	m=4
-	s=10
+	m=1
+	s=35
 	wait_time=m*60+s+2
 	now(wait_time)
 
