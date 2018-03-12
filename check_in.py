@@ -295,6 +295,84 @@ def manual_shiyong():
         d.swipe(919,420+delta_each*3,919,400)
         time.sleep(5)
 
+def jd_jr():
+    # d.screen.on()
+    # d.press.home()
+
+    # activity_name='com.jd.jrapp/.WelcomeActivity'
+    # launch_app(activity_name)
+    # time.sleep(10)
+    # x=267
+    # y=911
+    # y1=1395
+    # d.drag(x,y,x,y1,steps=2)
+
+    # x2=557
+    # d.drag(x,y1,x2,y1,steps=2)
+
+    # y2=1178
+    # d.drag(x2,y1,x2,y2,steps=2)
+    # print 'done'
+    # d.gesture((100,200),(300,200),(600,200),(100,600),(300,600),(600,900))
+
+    # ME_x=944
+    # ME_y=1868
+    # d.click(ME_x,ME_y)
+    # time.sleep(8)
+    # QianDao_x=131
+    # QianDao_y=767
+    # d.click(QianDao_x,QianDao_y)
+    # time.sleep(10)
+    # GangBeng_x=867
+    # GangBeng_y=533
+    # d.click(GangBeng_x,GangBeng_y)
+    # time.sleep(5)
+    # print 'jd_jr done'
+    # # d.press_back()
+
+    # know_x=541
+    # know_y=1273
+    # d.click(know_x,know_y)
+    # time.sleep(3)
+
+
+    # time.sleep(5)
+    GoJD_x=955
+    GoJD_y=708
+    d.click(GoJD_x,GoJD_y)
+    time.sleep(10)
+
+    Jindou_x=860
+    Jindou_y=1046
+    d.click(Jindou_x,Jindou_y)
+    time.sleep(10)
+
+    liuliang_x=692
+    liuliang_y=997
+    d.click(liuliang_x,liuliang_y)
+    time.sleep(10)
+
+    liuliang_qiandao_x = 537 
+    liuliang_qiandao_y = 441
+
+    d.click(liuliang_qiandao_x,liuliang_qiandao_y)
+    time.sleep(5)
+
+    d.press.back()
+    time.sleep(8)
+    d.press.back()
+    time.sleep(8)
+    d.press.back()
+    time.sleep(8)
+
+    finish_x=870
+    finish_y=1240
+    d.click(finish_x,finish_y)
+    time.sleep(3)
+
+
+    print 'JD done'
+
 def other_func():
     global displayWidth
     global displayHeight
@@ -304,13 +382,18 @@ def other_func():
 if __name__=='__main__':
     #print sys.argv[0]
     #print sys.argv[1]
-    if len(sys.argv)<2:
-        print "input argument"
-        print 'python checkin.py 1'
-        print 'python checkin.py 2'
+    # if len(sys.argv)<2:
+    #     print "input argument"
+    #     print 'python checkin.py 1'
+    #     print 'python checkin.py 2'
 
-        sys.exit(1)
+        # sys.exit(1)
+
     get_info()
+    # jd_jr()
+    suning_cuizi()
+
+    '''
     if sys.argv[1]=='1':
 
         suning_cuizi()
@@ -326,3 +409,4 @@ if __name__=='__main__':
     elif sys.argv[1]=='3':
         print "only click jd"
         jd_cuizi()
+    '''
