@@ -301,34 +301,30 @@ def jd_jr():
 
     # activity_name='com.jd.jrapp/.WelcomeActivity'
     # launch_app(activity_name)
-    # time.sleep(10)
-    # x=267
-    # y=911
-    # y1=1395
-    # d.drag(x,y,x,y1,steps=2)
+    # time.sleep(6)
 
-    # x2=557
-    # d.drag(x,y1,x2,y1,steps=2)
-
-    # y2=1178
-    # d.drag(x2,y1,x2,y2,steps=2)
-    # print 'done'
-    # d.gesture((100,200),(300,200),(600,200),(100,600),(300,600),(600,900))
-
-    # ME_x=944
-    # ME_y=1868
-    # d.click(ME_x,ME_y)
-    # time.sleep(8)
+    ME_x=944
+    ME_y=1868
+    print 'me'
+    d.click(ME_x,ME_y)
+    time.sleep(8)
+    QianDao_x=126
+    QianDao_y=673
+    print 'qiandao'
+    d.click(QianDao_x,QianDao_y)
+    time.sleep(7)
+    GangBeng_x=867
+    GangBeng_y=533
+    print 'gangben'
+    d.click(GangBeng_x,GangBeng_y)
+    time.sleep(5)
+    print 'jd_jr done'
+    d.press.back()
+    time.sleep(8)
     # QianDao_x=131
     # QianDao_y=767
-    # d.click(QianDao_x,QianDao_y)
-    # time.sleep(10)
-    # GangBeng_x=867
-    # GangBeng_y=533
-    # d.click(GangBeng_x,GangBeng_y)
-    # time.sleep(5)
-    # print 'jd_jr done'
-    # # d.press_back()
+    d.click(QianDao_x,QianDao_y)
+    time.sleep(5)
 
     # know_x=541
     # know_y=1273
@@ -390,9 +386,8 @@ if __name__=='__main__':
         # sys.exit(1)
 
     get_info()
-    # jd_jr()
     suning_cuizi()
-
+    jd_jr()
     '''
     if sys.argv[1]=='1':
 
