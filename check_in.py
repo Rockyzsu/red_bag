@@ -299,9 +299,9 @@ def jd_jr():
     # d.screen.on()
     # d.press.home()
 
-    # activity_name='com.jd.jrapp/.WelcomeActivity'
-    # launch_app(activity_name)
-    # time.sleep(6)
+    activity_name='com.jd.jrapp/.WelcomeActivity'
+    launch_app(activity_name)
+    time.sleep(10)
 
     ME_x=944
     ME_y=1868
