@@ -308,6 +308,28 @@ def jd_jr():
     print 'me'
     d.click(ME_x,ME_y)
     time.sleep(8)
+
+    #日历
+    rili_x = 677
+    rili_y = 809
+    d.click(5)
+    rili_item_x =560
+    rili_item_y = 958
+
+    d.click(rili_item_x,rili_item_y)
+    time.sleep(5)
+
+    choujian_x = 523
+    choujian_y = 1265
+
+    d.click(choujian_x,choujian_y)
+    time.sleep(5)
+
+    d.press.back()
+    time.sleep(5)
+    d.press.back()
+    time.sleep(5)
+
     QianDao_x=126
     QianDao_y=673
     print 'qiandao'
@@ -342,6 +364,27 @@ def jd_jr():
     Jindou_y=1046
     d.click(Jindou_x,Jindou_y)
     time.sleep(10)
+
+    qiandao_JD_x = 878
+    qiandao_JD_y = 429
+    d.click(qiandao_JD_x, qiandao_JD_y)
+    time.sleep(8)
+
+    fangpai_x = 548
+    fangpai_y = 1004
+    d.click(fangpai_x,fangpai_y)
+    time.sleep(5)
+
+    shouru_x = 538
+    shouru_y = 1623
+
+    d.click(shouru_x,shouru_y)
+    time.sleep(5)
+
+    close_x = 839
+    close_y = 471
+    d.click(close_x,close_y)
+    time.sleep(5)
 
     liuliang_x=692
     liuliang_y=997
