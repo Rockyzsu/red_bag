@@ -310,25 +310,25 @@ def jd_jr():
     time.sleep(8)
 
     #日历
-    rili_x = 677
-    rili_y = 809
-    d.click(5)
-    rili_item_x =560
-    rili_item_y = 958
-
-    d.click(rili_item_x,rili_item_y)
-    time.sleep(5)
-
-    choujian_x = 523
-    choujian_y = 1265
-
-    d.click(choujian_x,choujian_y)
-    time.sleep(5)
-
-    d.press.back()
-    time.sleep(5)
-    d.press.back()
-    time.sleep(5)
+    # rili_x = 677
+    # rili_y = 809
+    # d.click(rili_x,rili_y)
+    # rili_item_x =560
+    # rili_item_y = 958
+    #
+    # d.click(rili_item_x,rili_item_y)
+    # time.sleep(5)
+    #
+    # choujian_x = 523
+    # choujian_y = 1265
+    #
+    # d.click(choujian_x,choujian_y)
+    # time.sleep(5)
+    #
+    # d.press.back()
+    # time.sleep(5)
+    # d.press.back()
+    # time.sleep(5)
 
     QianDao_x=126
     QianDao_y=673
