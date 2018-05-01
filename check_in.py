@@ -23,6 +23,26 @@ def get_info():
     displayHeight=info['displayHeight']
     #print 'x=%s, y=%s ' %(displayWidth,displayHeight)
 
+def lnsh():
+    activity_name='com.vpclub.lnyp/.activity.SplashActivity'
+    launch_app(activity_name)
+    time.sleep(9)
+    remove_ad_x = 944 
+    remove_ad_y = 447
+    # d.click(remove_ad_x,remove_ad_y)
+    time.sleep(2)
+    lucky_x = 143 
+    lucky_y = 678
+    d.click(lucky_x,lucky_y)
+    time.sleep(8)
+
+    go_x = 545
+    go_y =1033
+    d.click(go_x,go_y)
+    time.sleep(9)
+    print 'Ling nan shen huo Done'
+
+
 def suning_cuizi():
     #苏宁在6点之后
     global displayWidth
@@ -334,7 +354,7 @@ def jd_jr():
     QianDao_y=673
     print 'qiandao'
     d.click(QianDao_x,QianDao_y)
-    time.sleep(7)
+    time.sleep(12)
     GangBeng_x=867
     GangBeng_y=533
     print 'gangben'
@@ -379,10 +399,10 @@ def jd_jr():
     shouru_y = 1623
 
     d.click(shouru_x,shouru_y)
-    time.sleep(5)
+    time.sleep(9)
 
-    close_x = 839
-    close_y = 471
+    close_x = 939
+    close_y = 544
     d.click(close_x,close_y)
     time.sleep(5)
 
@@ -412,6 +432,21 @@ def jd_jr():
 
     print 'JD done'
 
+def wjjf():
+    activity_name='com.hxwj.wjjf/.act.SplashActivity'
+    launch_app(activity_name)
+    time.sleep(15)
+
+    me_x = 969 
+    me_y = 1854
+    d.click(me_x,me_y)
+    time.sleep(9)
+
+    qiandao_x = 371 
+    qiandao_y = 414
+    d.click(qiandao_x,qiandao_y)
+    time.sleep(9)
+
 def other_func():
     global displayWidth
     global displayHeight
@@ -429,8 +464,11 @@ if __name__=='__main__':
         # sys.exit(1)
 
     get_info()
-    suning_cuizi()
-    jd_jr()
+    # suning_cuizi()
+    # jd_jr()
+    # lnsh()
+    wjjf()
+
     '''
     if sys.argv[1]=='1':
 
