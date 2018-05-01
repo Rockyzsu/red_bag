@@ -29,7 +29,7 @@ def lnsh():
     time.sleep(9)
     remove_ad_x = 944 
     remove_ad_y = 447
-    # d.click(remove_ad_x,remove_ad_y)
+    d.click(remove_ad_x,remove_ad_y)
     time.sleep(2)
     lucky_x = 143 
     lucky_y = 678
@@ -466,8 +466,8 @@ if __name__=='__main__':
     get_info()
     # suning_cuizi()
     # jd_jr()
-    # lnsh()
-    wjjf()
+    lnsh()
+    # wjjf()
 
     '''
     if sys.argv[1]=='1':
