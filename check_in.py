@@ -10,10 +10,14 @@ displayWidth_cuizi=1080
 displayHeight_cuizi=1920
 #启动app
 def launch_app(activity_name):
-    cmd='adb shell am start -n %s' %activity_name
-    p=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
-    print p.stdout.read()
-    time.sleep(15)
+    try:
+        cmd='adb shell am start -n %s' %activity_name
+        p=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
+        print p.stdout.read()
+        time.sleep(15)
+    except Exception,e:
+        print e
+        return 
 
 def get_info():
     global displayWidth
@@ -447,6 +451,40 @@ def wjjf():
     d.click(qiandao_x,qiandao_y)
     time.sleep(9)
 
+def fxsc():
+    activity_name='com.phicomm.fxmall/com.phicomm.fxmall.view.MainActivity'
+    launch_app(activity_name)
+    time.sleep(15)
+    me_X = 1002 
+    me_Y = 1865
+    d.click(me_X, me_Y)
+    time.sleep(8)
+
+    qiandao_X = 400 
+    qiandao_Y = 300
+    d.click(qiandao_X, qiandao_Y)
+    time.sleep(8)    
+
+
+def cmcc():
+    activity_name='com.kingpoint.gmcchh/.newui.main.skeleton.view.SkeletonActivity'
+    launch_app(activity_name)
+    time.sleep(15)
+    me_X = 98 
+    me_Y = 1857
+    d.click(me_X, me_Y)
+    time.sleep(7)
+
+    qiandao_X = 440 
+    qiandao_Y = 471
+    d.click(qiandao_X, qiandao_Y)
+    time.sleep(8)
+
+    click_X = 533
+    click_Y = 946
+    d.click(click_X, click_Y)
+    time.sleep(6)
+
 def other_func():
     global displayWidth
     global displayHeight
@@ -464,10 +502,13 @@ if __name__=='__main__':
         # sys.exit(1)
 
     get_info()
+
     suning_cuizi()
     jd_jr()
     lnsh()
     wjjf()
+    fxsc()
+    cmcc()
 
     '''
     if sys.argv[1]=='1':
