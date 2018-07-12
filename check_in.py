@@ -13,10 +13,10 @@ def launch_app(activity_name):
     try:
         cmd='adb shell am start -n %s' %activity_name
         p=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
-        print p.stdout.read()
+        print(p.stdout.read())
         time.sleep(15)
-    except Exception,e:
-        print e
+    except Exception as e:
+        print(e)
         return 
 
 def get_info():
@@ -25,7 +25,7 @@ def get_info():
     info=d.info
     displayWidth=info['displayWidth']
     displayHeight=info['displayHeight']
-    #print 'x=%s, y=%s ' %(displayWidth,displayHeight)
+    #print("x=%s, y=%s ") %(displayWidth,displayHeight)
 
 def lnsh():
     activity_name='com.vpclub.lnyp/.activity.SplashActivity'
@@ -44,7 +44,7 @@ def lnsh():
     go_y =1033
     d.click(go_x,go_y)
     time.sleep(9)
-    print 'Ling nan shen huo Done'
+    print("Ling nan shen huo Done")
 
 
 def suning_cuizi():
@@ -77,29 +77,29 @@ def suning_cuizi():
     launch_app(activity_name)
     time.sleep(9)
     if not d(text=u'领云钻').wait.exists(timeout=20*1000):
-        print "Failed to get the page"
+        print("Failed to get the page")
         return
     d(text=u'领云钻').click()
-    print "Click"
+    print("Click")
     yun_x=551
     yun_y=738
 
     #glaxy_x=yun_x*gallery*full/cuizi_full
     time.sleep(15)
     d.click(yun_x,yun_y)
-    print "Click"
+    print("Click")
     time.sleep(10)
 
     daka_x=displayWidth/2
     daka_y=displayHeight/2+100
     d.click(daka_x,daka_y)
-    print "Click"
+    print("Click")
     time.sleep(20)
     d.click(daka_x,daka_y)
-    print "Click"
+    print("Click")
     d.click(daka_x,daka_y)
-    print "Click"
-    print "Sunning Done"
+    print("Click")
+    print("Sunning Done")
 
 def jd_cuizi():
     d.screen.on()
@@ -108,7 +108,7 @@ def jd_cuizi():
     launch_app(activity_name)
 
     if not d(text=u'领京豆').wait.exists(timeout=20*1000):
-        print "Failed to get the page"
+        print("Failed to get the page")
         return
     d(text=u'领京豆').click()
     dou_x=915
@@ -119,7 +119,7 @@ def jd_cuizi():
     d.click(dou_x,dou_y)
     time.sleep(2)
     d.click(dou_x,dou_y)
-    print u"京豆"
+    print(u"京豆")
     time.sleep(3)
     get_x,get_y=505,900
     d.click(get_x,get_y)
@@ -132,7 +132,7 @@ def jd_cuizi():
     ll_x,ll_y=544,432
     d.click(ll_x,ll_y)
     time.sleep(8)
-    print u'京东完成'
+    print('京东完成')
     '''
     #点击使用功能
     d.press.back()
@@ -163,8 +163,8 @@ def jd_cuizi():
     '''
 
     time.sleep(5)
-    print "get liu liang"
-    print "JD done"
+    print("get liu liang")
+    print("JD done")
 
 def gdyd_cuizi():
     d.screen.on()
@@ -186,7 +186,7 @@ def gdyd_cuizi():
         time.sleep(3)
     d(text=u'广东移动').click()
     if d(text=u'版本更新').wait.exists(timeout=12*1000):
-        print "Dismiss update"
+        print("Dismiss update")
         d(text=u'取消').click()
     #登录账号,刷新下即可
     s_x=544
@@ -204,7 +204,7 @@ def gdyd_cuizi():
     yd_x=540
     yd_y=1100
     d.click(yd_x,yd_y)
-    print "GDYD done"
+    print("GDYD done")
     d.press.back()
     d(text=u'全部').click()
     time.sleep(8)
@@ -240,7 +240,7 @@ def taobao_cuizi():
     activity_name='com.taobao.taobao/com.taobao.tao.homepage.MainActivity3'
     launch_app(activity_name)
     if d(text=u'领金币').wait.exists(timeout=12*1000):
-        #print "Dismiss update"
+        #print("Dismiss update")
         d(text=u'领金币').click()
     #登录账号,刷新下即可
 
@@ -248,7 +248,7 @@ def taobao_cuizi():
     jb_x=900
     jb_y=370
     d.click(jb_x,jb_y)
-    print "Click"
+    print("Click")
     time.sleep(6)
 
 
@@ -294,7 +294,7 @@ def taobao_shiyong():
 
         for dragtime in range(5):
             for i in range(3):
-                print "Trial"
+                print("Trial")
                 d.click(919,600+i*delta_each)
                 time.sleep(8)
                 each_dianpu()
@@ -302,17 +302,17 @@ def taobao_shiyong():
             d.swipe(919,1600,919,400)
             time.sleep(5)
     except:
-        print "Can't find items"
+        print("Can't find items")
 
 def manual_shiyong():
     delta_each=400
     time.sleep(3)
 
     for dragtime in range(20):
-        print 'dragtime'
+        print("dragtime")
         for i in range(3):
             d.click(919,420+i*delta_each)
-            print 'click'
+            print('click')
             time.sleep(8)
             each_dianpu()
             time.sleep(8)
@@ -329,7 +329,7 @@ def jd_jr():
 
     ME_x=944
     ME_y=1868
-    print 'me'
+    print("me")
     d.click(ME_x,ME_y)
     time.sleep(8)
 
@@ -356,15 +356,15 @@ def jd_jr():
 
     QianDao_x=126
     QianDao_y=673
-    print 'qiandao'
+    print("qiandao")
     d.click(QianDao_x,QianDao_y)
     time.sleep(12)
     GangBeng_x=867
     GangBeng_y=533
-    print 'gangben'
+    print("gangben")
     d.click(GangBeng_x,GangBeng_y)
     time.sleep(5)
-    print 'jd_jr done'
+    print("jd_jr done")
     d.press.back()
     time.sleep(8)
     # QianDao_x=131
@@ -434,7 +434,7 @@ def jd_jr():
     time.sleep(3)
 
 
-    print 'JD done'
+    print("JD done")
 
 def wjjf():
     activity_name='com.hxwj.wjjf/.act.SplashActivity'
@@ -488,16 +488,16 @@ def cmcc():
 def other_func():
     global displayWidth
     global displayHeight
-    print displayWidth
-    print displayHeight
+    print(displayWidth)
+    print(displayHeight)
 
 if __name__=='__main__':
     #print sys.argv[0]
     #print sys.argv[1]
     # if len(sys.argv)<2:
-    #     print "input argument"
-    #     print 'python checkin.py 1'
-    #     print 'python checkin.py 2'
+    #     print("input argument")
+    #     print("python checkin.py 1")
+    #     print("python checkin.py 2")
 
         # sys.exit(1)
 
@@ -516,14 +516,14 @@ if __name__=='__main__':
         suning_cuizi()
         jd_cuizi()
         #taobao_cuizi()
-        #print "on shi yong"
+        #print("on shi yong")
         #taobao_shiyong()
 
     elif sys.argv[1]=='2':
-        print "put UI on taobao trial\n"
+        print("put UI on taobao trial\n")
         time.sleep(5)
         manual_shiyong()
     elif sys.argv[1]=='3':
-        print "only click jd"
+        print("only click jd")
         jd_cuizi()
     '''
