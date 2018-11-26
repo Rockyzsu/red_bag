@@ -28,7 +28,7 @@ def get_info():
     info = d.info
     displayWidth = info['displayWidth']
     displayHeight = info['displayHeight']
-    # print("x=%s, y=%s ") %(displayWidth,displayHeight)
+    print("x={}, y={}".format(displayWidth,displayHeight))
 
 
 def lnsh():
@@ -489,11 +489,28 @@ def alipay():
     activity_name = 'com.eg.android.AlipayGphone/.AlipayLogin'
     launch_app(activity_name)
     time.sleep(10)
-    track_list = [(987,1840),(563,491),(155,983),(544,686), # 连续点击
+
+    #领取搜索红包
+    track_list0 = [(226,163),(188,582),(455,577)]
+
+    for step in track_list0:
+        d.click(step[0],step[1])
+        print('click')
+        time.sleep(5)
+
+    # 点击3次返回到主页
+    d.press('back')
+    time.sleep(3)
+    d.press('back')
+    time.sleep(3)
+    d.press('back')
+    time.sleep(3)
+
+    track_list1 = [(987,1840),(563,491),(155,983),(544,686), # 连续点击
                   (544,686),(544,686),(544,686),(544,686),(544,686),
                   (544,686),(544,686),(544,686),(544,686),(544,686),
                   (544,686),(544,686)]
-    for step in track_list:
+    for step in track_list1:
         d.click(step[0],step[1])
         print('click')
         time.sleep(5)
@@ -510,6 +527,18 @@ def yunsanfu():
         time.sleep(5)
     print('云闪付签到完成')
 
+# 华泰 签到
+def htzq():
+    activity_name ='com.lphtsccft/com.lphtsccft.zhangle.startup.SplashScreenActivity'
+    launch_app(activity_name)
+    time.sleep(8)
+
+    track_list = [(979, 1855), (950, 296)]
+    for step in track_list:
+        d.click(step[0], step[1])
+        time.sleep(5)
+
+    print('华泰签到完成')
 
 def other_func():
     global displayWidth
@@ -519,15 +548,11 @@ def other_func():
 
 
 if __name__ == '__main__':
-
+    # 获取基本信息
     get_info()
+
     yunsanfu()
     alipay()
     cmcc()
-
-    # suning_cuizi()
-    # jd_jr()
-    # lnsh()
-    # wjjf()
-    # fxsc()
+    htzq()
 
